@@ -11,14 +11,14 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='suggest',
 
-    version='0.2.0',
+    version='0.2.1',
 
     description='A tool that suggests imports for your projects based on what you are already using.',
     long_description=long_description,
 
     # The project's main homepage.
     url='https://github.com/not-inept/suggest_imports',
-    download_url='https://github.com/not-inept/suggest_imports/archive/0.2.tar.gz',
+    download_url='https://github.com/not-inept/suggest_imports/archive/0.2.1.tar.gz',
     # Author details
     author='not-inept',
     author_email='notinept@gmail.com',
@@ -47,7 +47,7 @@ setup(
     keywords='suggest find import package',
 
 
-    packages=find_packages(exclude=['suggest_imports']),
+    # packages=find_packages(),
 
 
 
@@ -77,7 +77,8 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
         'console_scripts': [
-            'suggest=suggest_imports:main',
-        ],
+            'suggest = suggest_imports.Suggest:main'
+        ]
     },
+    py_modules = ['suggest_imports','suggest_imports.Suggest']
 )

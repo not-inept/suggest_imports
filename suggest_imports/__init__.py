@@ -1,4 +1,1 @@
-import suggest
-
-def main():
-    suggest.main()
+from suggest_imports import Suggest

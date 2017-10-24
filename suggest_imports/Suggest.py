@@ -8,6 +8,10 @@ import urllib.request
 from enum import Enum
 from tabulate import tabulate
 
+def usage():
+    print("suggest must be called within a valid project directory")
+    sys.exit(0)
+
 def parse_pip():
     print("Parsing PIP yet to be implemented.")
 
@@ -112,7 +116,7 @@ def suggest_cargo(index, projectDirs=[], cargoTomls=[], specificPackages=[]):
                         if isinstance(obj[k], dict):
                             to_parse.append(obj[k])
         except:
-            print("Hmmm")
+            usage()
     return get_suggestions(index, packages)
 
 
