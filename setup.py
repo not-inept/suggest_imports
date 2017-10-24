@@ -17,8 +17,8 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/pypa/sampleproject',
-
+    url='https://github.com/not-inept/suggest_imports',
+    download_url='https://github.com/not-inept/suggest_imports/archive/0.2.tar.gz',
     # Author details
     author='not-inept',
     author_email='notinept@gmail.com',
@@ -53,7 +53,7 @@ setup(
 
     # List run-time dependencies here.  These will be installed by pip when
     # your project is installed. For an analysis of "install_requires" vs pip's
-    # requirements files see:
+    # requirements files seePython, Rust, and Node projects:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=['peppercorn', 'toml', 'tabulate'],
 
